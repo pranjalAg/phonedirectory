@@ -5,10 +5,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
 		
-		.info{
+		#dataenter{
 			
 			padding: 10% 4% 10% 4% !important;
-			display: inline-block !important;
+			display: none;
+		}
+		#tableview{
+			display: none;
 		}
 		.inpt{
 			display: block;
@@ -22,38 +25,43 @@
 		<h2>Phone Directory App</h2>
 	</header>
 	<div class="text-center">
-		<input type="submit" name="Add" value="Add" class="btn btn-lg btn-success">
-		<input type="submit" name="View" value="View" class="btn btn-lg btn-primary">
+		<input type="submit" name="Add" onclick="displayform()" value="Add" class="btn btn-lg btn-success">
+		<input type="submit" name="View" onclick="displaytable()" value="View" class="btn btn-lg btn-primary">
 	</div>
 	<!-- form div only shown when add button is clicked -->
 	<div class="text-center">
-		<div class=" info">
-			
+		<div id="dataenter" class="info">
 			<input class="inpt" type="text" name="Name" placeholder="Enter Name">
 			<input class="inpt" type="Mobile" name="Number" placeholder="Enter Mobile Number">
 			<input class="btn btn-lg btn-success" type="submit" name="Name" value="Submit">
 		</div>
+		<div id="dataenter">
+			<p id="fllname">{name}</p>
+			<p id="mobnum">{no.}</p>
+		</div>
 	</div>
-	<!-- form div ends -->
+	<!-- ///form div ends -->
 	<!-- list div only shows when view button is clicked -->
-	<div>
-		<table>
-			<th>
-				<td>Name</td>
-				<td>Mobile</td>
-				<td>delete</td>
-			</th>
+	<div id="tableview" class="container">
+		<table class="table">
+			<tr class="thead-dark">
+				<th>Name</th>
+				<th>Mobile</th>
+				<th>delete</th>
+			</tr>
 			<!-- Loop here for dynamically output entries-->
 			<tr>
 				<td>{Name}</td>
 				<td>{Mobile}</td>
 				<td>
-					<input type="submit" name="Delete" value="Delete" class="btn btn-lg btn-danger">
+					<input type="submit" name="Delete" value="Delete" class="btn btn-sm btn-danger">
 				</td>
 			</tr>
-			<!-- loop ends -->
+			<!-- ///loop ends -->
 		</table>
 	</div>
-	<!-- list div ends -->
+	<!-- ///list div ends -->
+
+	<script type="text/javascript" src="dir.js"></script>
 </body>
 </html>
