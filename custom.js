@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	var list = '<td style="text-align:center;" colspan="4">No record</td>'
+	var list = '<td style="text-align:center;" colspan="4">No record Found !!</td>'
 	$('.NoRecordList').html(list);
 	$( ".addNewrecord" ).click(function() {
 		$('#testmodal').modal('show');
