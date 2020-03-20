@@ -3,6 +3,7 @@
 <head>
 	<title>Phone Directory</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
@@ -12,13 +13,13 @@
 	<!-- form div only shown when add button is clicked -->
 	<!-- ///form div ends -->
 	<!-- list div only shows when view button is clicked -->
+	<input type="hidden" name="recordcount" value="0">
 	<div id="tableview" class="container">
-		<table class="table">
+		<table class="table center-table">
 			<tr class="thead-dark">
 				<th>Name</th>
 				<th>Mobile</th>
-				<th>delete</th>
-				<th><button class="btn-success addNewrecord">Add</button></th>
+				<th><button class="btn btn-success addNewrecord"><i class="fa fa-plus" aria-hidden="true"></i></button></th>
 			</tr>
 			<!-- Loop here for dynamically output entries-->
 			<tr class="NoRecordList">
