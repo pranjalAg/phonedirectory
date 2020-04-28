@@ -1,0 +1,11 @@
+{
+  "name": "Phone Directory",
+  "short_name": "PD",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A phone directory app.",
+  "icons": [
+    
+  ]
+}
