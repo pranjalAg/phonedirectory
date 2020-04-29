@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+	registerSW();
 	$("#mNumber").CcPicker({"countryCode":"in"});
 	var list = '<td style="text-align:center;" colspan="4">No record Found !!</td>';
 	$('.NoRecordList').html(list);
@@ -34,4 +35,13 @@ $( document ).ready(function() {
 		var recid = $(this).attr('id');
 		$('#Reco_'+recid).remove();
 	});
+	async function registerSW() {
+	  if ('serviceWorker' in navigator) {
+	    try {
+	      await navigator.serviceWorker.register('./sw.js');
+	    } catch (e) {
+	      console.log(`SW registration failed`);
+	    }
+	  }
+	}
 });
