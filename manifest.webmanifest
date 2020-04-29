@@ -3,7 +3,8 @@
   "short_name": "PD",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
+  "background_color": "#317EFB",
+  "theme_color": "#317EFB",
   "description": "A phone directory app.",
   "icons": [
 		{
